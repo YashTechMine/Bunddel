@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Your Freelance Career Today</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3D59',
+                        secondary: '#FF6B6B'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .countdown { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="fixed top-0 left-0 right-0 bg-primary/95 text-white py-2 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-center">
+            <i class="ri-time-line ri-lg mr-2"></i>
+            <span class="countdown font-semibold">Limited Time Offer: 50% OFF - Ends in <span id="countdown">23:59:59</span></span>
+        </div>
+    </div>
+
+    <nav class="bg-white/95 sticky top-10 z-40 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="font-['Pacifico'] text-2xl text-primary">logo</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#benefits" class="text-gray-600 hover:text-primary">Benefits</a>
+                    <a href="#bundle" class="text-gray-600 hover:text-primary">What's Inside</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary">Success Stories</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary">FAQ</a>
+                </div>
+                <button class="bg-secondary text-white px-6 py-2 !rounded-button font-semibold hover:bg-secondary/90 transition whitespace-nowrap">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://public.readdy.ai/ai/img_res/70e2d0f3941a2f38e4f658aa7fbf04db.jpg')] bg-cover bg-center opacity-10"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative z-10">
+                    <h1 class="text-5xl font-bold text-primary mb-6 leading-tight">Launch Your Freelance Career & Earn from Day 1!</h1>
+                    <p class="text-xl text-gray-600 mb-8">Get a complete step-by-step guide to freelancing, including finding clients, setting prices, and building a portfolio—perfect for beginners!</p>
+                    <div class="space-y-6">
+                        <button class="bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap w-full md:w-auto">
+                            Get Instant Access Now - Save 50%
+                        </button>
+                        <div class="flex items-center space-x-4 text-sm text-gray-600">
+                           
+                            <div class="flex items-center">
+                                <i class="ri-lock-line text-primary mr-2"></i>
+                                <span>Secure Payment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://public.readdy.ai/ai/img_res/839450eba6bd4011a7fbfef2fca07a4f.jpg" alt="Product Bundle" class="w-full rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">Why Choose This Freelancing Bundle?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-user-star-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Get Your First Client Fast</h3>
+                    <p class="text-gray-600">Learn proven strategies to land your first paying client within weeks, not months.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-money-dollar-circle-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Smart Pricing Strategies</h3>
+                    <p class="text-gray-600">Set competitive rates that reflect your value and maximize your earnings.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-file-list-3-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ready-Made Templates</h3>
+                    <p class="text-gray-600">Access professional contract templates, proposals, and invoices.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-global-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Marketing Mastery</h3>
+                    <p class="text-gray-600">Learn how to promote your services effectively on social media and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bundle" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">What's Inside The Bundle?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://public.readdy.ai/ai/img_res/f9a417411487163eb5405aa566fc9570.jpg" alt="Complete Guide" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Complete Freelancing Guide</h3>
+                    <p class="text-gray-600 mb-4">200+ pages of actionable strategies and tips to build your freelance business.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Step-by-step startup guide</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Client acquisition strategies</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Pricing calculator included</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://public.readdy.ai/ai/img_res/c92426acb13ab020c26344c44c0530ce.jpg" alt="Video Course" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Video Masterclass Series</h3>
+                    <p class="text-gray-600 mb-4">10 hours of in-depth video training covering essential freelancing skills.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Portfolio building workshop</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Client communication scripts</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Time management techniques</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://public.readdy.ai/ai/img_res/6cc47c6388c279df6394a8345862e712.jpg" alt="Templates Pack" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Templates & Resources Pack</h3>
+                    <p class="text-gray-600 mb-4">Everything you need to look professional from day one.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Contract templates</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Proposal templates</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ri-check-line text-green-500 mr-2"></i>
+                            <span>Invoice templates</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">Success Stories from Our Community</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/e8a73828786e5002146fa4078b3a15b0.jpg" alt="Sarah Mitchell" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Mitchell</h4>
+                            <p class="text-sm text-gray-600">Web Developer</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"This bundle was exactly what I needed to transition from my 9-5 job to freelancing. Within 2 months, I had 3 regular clients and was matching my previous salary."</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/4639159759dd61b2ec307c428f68b2d5.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Digital Marketing Consultant</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"The templates alone saved me countless hours. I landed my first $2,000 project using the proposal template provided in the bundle."</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/2bb2a3a30fa3d0261fbef91f5adde556.jpg" alt="Emma Rodriguez" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Emma Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Content Writer</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"The step-by-step approach made it so easy to get started. I'm now earning more than I ever did in my corporate job, with complete flexibility."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-xl">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-semibold">Is this suitable for complete beginners?</span>
+                        <i class="ri-arrow-down-s-line transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        Absolutely! The bundle is specifically designed to take you from zero to professional freelancer. We start with the basics and gradually build up to advanced strategies.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-semibold">How do I access the materials?</span>
+                        <i class="ri-arrow-down-s-line transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        After purchase, you'll receive immediate access to our private member portal where all materials are available for download. You'll also get lifetime access to future updates.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Freelance Journey?</h2>
+            <p class="text-xl mb-8 opacity-90">Join thousands of successful freelancers who started with this bundle</p>
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl font-bold line-through opacity-50">$197</span>
+                    <span class="text-4xl font-bold">$97</span>
+                </div>
+                <button class="bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap">
+                    Get Started Now - 50% OFF
+                </button>
+                <div class="flex items-center justify-center space-x-6 mt-8">
+                   
+                    <div class="flex items-center">
+                        <i class="ri-lock-line mr-2"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 mt-4">
+                    <i class="ri-visa-line ri-2x"></i>
+                    <i class="ri-mastercard-line ri-2x"></i>
+                    <i class="ri-paypal-line ri-2x"></i>
+                    <i class="ri-apple-line ri-2x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="font-['Pacifico'] text-2xl text-primary mb-4 block">logo</a>
+                    <p class="text-gray-600">Transform your career with our comprehensive freelancing guide.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#bundle">What's Inside</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span>support@freelancebundle.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-customer-service-line mr-2"></i>
+                            <span>24/7 Support</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-primary">
+                            <i class="ri-twitter-line ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary">
+                            <i class="ri-facebook-line ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary">
+                            <i class="ri-instagram-line ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary">
+                            <i class="ri-linkedin-line ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2025 Freelance Bundle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+            const diff = end - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
