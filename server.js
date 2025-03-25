@@ -143,29 +143,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 // Send Download Email Function
-async function sendDownloadEmail(to, downloadUrl, filename) {
-    try {
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: to,
-            subject: 'Your Purchased Download is Ready',
-            html: `
-                <h1>Download Your File</h1>
-                <p>Thank you for your purchase!</p>
-                <p>Click the link below to download your file:</p>
-                <a href="${downloadUrl}">Download ${filename}</a>
-                <p>If the link doesn't work, please copy and paste the following URL in your browser:</p>
-                <p>${downloadUrl}</p>
-            `
-        };
 
-        await transporter.sendMail(mailOptions);
-        console.log('Download email sent successfully');
-    } catch (error) {
-        console.error('Email sending failed:', error);
-        throw new Error('Failed to send download email');
-    }
-}
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
