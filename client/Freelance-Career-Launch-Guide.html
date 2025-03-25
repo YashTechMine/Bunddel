@@ -48,6 +48,7 @@
             margin: 0;
         }
     </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body class="bg-white">
     <div class="fixed top-0 left-0 right-0 bg-primary/95 text-white py-2 z-50">
@@ -295,7 +296,7 @@
                     <span class="text-2xl font-bold line-through opacity-50">$197</span>
                     <span class="text-4xl font-bold">$97</span>
                 </div>
-                <button class="bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap">
+                <button id="payButton" class="bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap">
                     Get Started Now - 50% OFF
                 </button>
                 <div class="flex items-center justify-center space-x-6 mt-8">
@@ -390,6 +391,73 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+    </script>
+
+
+    <script>
+        document.getElementById("payButton").addEventListener("click", async () => {
+            try {
+                const response = await fetch("/create-order", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ amount: 500 })
+                });
+                const order = await response.json();
+        
+                const options = {
+                    key: "rzp_test_MwbkBdowmoQC1c", // Use environment variable for key
+                    amount: order.amount,
+                    currency: "INR",
+                    name: "Your Company",
+                    description: "Purchase Description",
+                    order_id: order.id,
+                    handler: async function (response) {
+                        try {
+                            const verifyPayload = {
+                                ...response,
+                                filename: "HowToStartaFreelanceBusiness.zip"
+                            };
+        
+                            const verifyRes = await fetch("/verify-payment", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify(verifyPayload)
+                            });
+        
+                            if (!verifyRes.ok) {
+                                throw new Error('Payment verification failed');
+                            }
+        
+                            // Get the blob from the response
+                            const blob = await verifyRes.blob();
+                            
+                            // Create a download link
+                            const link = document.createElement("a");
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = "Freelance-Career-Launch-Guide.zip";
+                            document.body.appendChild(link);
+                            link.click();
+                            
+                            // Clean up
+                            document.body.removeChild(link);
+                            window.URL.revokeObjectURL(link.href);
+        
+                            alert("Payment Successful! Your file is downloading...");
+                        } catch (error) {
+                            console.error("Verification error:", error);
+                            alert("Payment verification failed!");
+                        }
+                    },
+                    theme: { color: "#3399cc" }
+                };
+        
+                const razorpay = new Razorpay(options);
+                razorpay.open();
+            } catch (error) {
+                console.error(error);
+                alert("Something went wrong!");
+            }
+        });
     </script>
 </body>
 </html>
