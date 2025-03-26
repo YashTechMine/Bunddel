@@ -78,7 +78,7 @@
                     <a href="#testimonials" class="text-gray-600 hover:text-primary">Success Stories</a>
                     <a href="#faq" class="text-gray-600 hover:text-primary">FAQ</a>
                 </div>
-                <button id="payButton" class="bg-secondary text-white px-6 py-2 !rounded-button font-semibold hover:bg-secondary/90 transition whitespace-nowrap">Get Started</button>
+                <button  class="payButton bg-secondary text-white px-6 py-2 !rounded-button font-semibold hover:bg-secondary/90 transition whitespace-nowrap">Get Started</button>
             </div>
         </div>
     </nav>
@@ -91,7 +91,7 @@
                     <h1 class="text-5xl font-bold text-primary mb-6 leading-tight">Launch Your Freelance Career & Earn from Day 1!</h1>
                     <p class="text-xl text-gray-600 mb-8">Get a complete step-by-step guide to freelancing, including finding clients, setting prices, and building a portfolio—perfect for beginners!</p>
                     <div class="space-y-6">
-                        <button id="payButton" class="bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap w-full md:w-auto">
+                        <button  class="payButton bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap w-full md:w-auto">
                             Get Instant Access Now - Save 50%
                         </button>
                         <div class="flex items-center space-x-4 text-sm text-gray-600">
@@ -306,7 +306,7 @@
                     <span class="text-2xl font-bold line-through opacity-50">RS 1200</span>
                     <span class="text-4xl font-bold">RS 600</span>
                 </div>
-                <button id="payButton" class="bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap">
+                <button  class="payButton bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg hover:bg-secondary/90 transition whitespace-nowrap">
                     Get Started Now - 50% OFF
                 </button>
                 <div class="flex items-center justify-center space-x-6 mt-8">
@@ -435,7 +435,12 @@
 
     <script>
         // Modal DOM Elements
-        const payButton = document.getElementById('payButton');
+        const payButton = document.querySelectorAll('.payButton').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Button clicked');
+            emailModal.classList.remove('hidden');
+            });
+        });;
         const emailModal = document.getElementById('emailModal');
         const emailInput = document.getElementById('emailInput');
         const confirmEmailBtn = document.getElementById('confirmEmail');
@@ -448,9 +453,7 @@
         }
 
         // Show Email Modal
-        payButton.addEventListener('click', () => {
-            emailModal.classList.remove('hidden');
-        });
+       
 
         // Cancel Modal
         cancelEmailModalBtn.addEventListener('click', () => {
