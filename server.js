@@ -45,7 +45,9 @@ app.get("/", (req, res) => {
 app.get("/Freelance-Career-Launch-Guide", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "Freelance-Career-Launch-Guide.html"));
 });
-
+app.get("/terms-conditions", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "Terms-conditions.html"));
+});
 // Create Razorpay Order
 app.post("/create-order", async (req, res) => {
     try {
