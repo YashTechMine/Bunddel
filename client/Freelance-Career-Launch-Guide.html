@@ -502,6 +502,7 @@
             </div>
         </div>
     </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <script>
         // Modal DOM Elements
@@ -549,14 +550,14 @@
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ 
-                        amount: 600,
+                        amount: 400,
                         email: email 
                     })
                 });
                 const order = await response.json();
 
                 const options = {
-                    key: "rzp_test_MwbkBdowmoQC1c", 
+                    key: "rzp_live_yDlxJuxskDnOhQ", 
                     amount: order.amount,
                     currency: "INR",
                     name: "YashTech Mine",
